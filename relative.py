@@ -10,7 +10,7 @@ import os
 output_folder = 'output'  # Path to the folder where the modified .txt files will be stored
 os.makedirs(output_folder, exist_ok=True)
 for filename in os.listdir(os.getcwd()):
-    if filename.endswith('.txt'):
+    if filename.endswith('.txt') and filename!= 'requirements.txt':
         # Read the stock symbols from the input file
         with open(filename, 'r') as file:
             symbols = file.read().split(',')
