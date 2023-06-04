@@ -8,7 +8,7 @@ Created on Sun Jun  4 19:24:56 2023
 import os
 
 output_folder = 'output'  # Path to the folder where the modified .txt files will be stored
-
+os.makedirs(output_folder, exist_ok=True)
 for filename in os.listdir(os.getcwd()):
     if filename.endswith('.txt'):
         # Read the stock symbols from the input file
